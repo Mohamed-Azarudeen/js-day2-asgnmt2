@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <h1>Day-2</h1>
+        <h2>Assignment-2</h2>
+        <h3>Print the Contents of Current window</h3>
+        <script>
+            var today = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            document.writeln("Today is : " + weekday[today.getDay()]);
+
+            var Hours, Minutes;
+            Hours = today.getHours();
+            Minutes = today.getMinutes();
+            meridiem = (Hours <= 12) ? 'AM' : 'PM';
+            Hours = Hours ? Hours : '12';
+            Minutes = (10 > Minutes) ? '0'+Minutes : Minutes;
+
+            document.writeln("\nCurrent Time is : " + Hours + meridiem + ':' + Minutes + ':' + today.getSeconds());
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="window.print()">Print</button>
+    </body>
+</html>
